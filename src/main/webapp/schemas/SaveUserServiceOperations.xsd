@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://com/wayofcode/webservices/saveUserServices" xmlns:user="http://user.wayofcode.blog.com"
+            targetNamespace="http://com/wayofcode/webservices/saveUserServices"
+            elementFormDefault="qualified">
+    <xsd:import namespace="http://user.wayofcode.blog.com"
+                schemaLocation="UserDetails.xsd" />
+    <xsd:element name="SaveUserRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="userDetails" type="user:User" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="SaveUserResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="userId" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

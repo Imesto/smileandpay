@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:product="http://www.smileandpay.com/webservice/entity/product"
+            targetNamespace="http://www.smileandpay.com/webservice/service/updateProductServices"
+            elementFormDefault="qualified">
+    <xsd:import namespace="http://www.smileandpay.com/webservice/entity/product"
+                schemaLocation="Product.xsd" />
+    <xsd:element name="UpdateProductRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="productId" type="xsd:int" />
+                <xsd:element name="productDetails" type="product:Product" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="UpdateProductResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="status" type="xsd:string" />
+                <xsd:element name="errorMessage" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="productId" type="xsd:int" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

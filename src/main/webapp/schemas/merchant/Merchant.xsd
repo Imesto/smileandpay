@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.smileandpay.com/webservice/entity/merchant"
+           targetNamespace="http://www.smileandpay.com/webservice/entity/merchant" elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+    <xs:element name="Merchant" type="Merchant" />
+    <xs:complexType name="Merchant">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="lastname" type="xs:string" />
+            <xs:element name="birthday" type="xs:date" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:merchant="http://www.smileandpay.com/webservice/entity/merchant"
+            xmlns:address="http://www.smileandpay.com/webservice/entity/address"
+            targetNamespace="http://www.smileandpay.com/webservice/service/updateMerchantServices"
+            elementFormDefault="qualified">
+    <xsd:import namespace="http://www.smileandpay.com/webservice/entity/merchant"
+                schemaLocation="Merchant.xsd" />
+    <xsd:import namespace="http://www.smileandpay.com/webservice/entity/address"
+                schemaLocation="Address.xsd" />
+
+    <xsd:element name="UpdateMerchantRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="merchantId" type="xsd:int" />
+                <xsd:element name="merchantDetails" type="merchant:Merchant" />
+                <xsd:element name="addressDetails" type="address:Address" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="UpdateMerchantResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="status" type="xsd:string" />
+                <xsd:element name="errorMessage" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="merchantId" type="xsd:int" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

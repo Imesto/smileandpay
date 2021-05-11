@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.smileandpay.com/webservice/entity/product"
+           targetNamespace="http://www.smileandpay.com/webservice/entity/product" elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+    <xs:element name="Product" type="Product" />
+    <xs:complexType name="Product">
+        <xs:sequence>
+            <xs:element name="label" type="xs:string" />
+            <xs:element name="unit_price" type="xs:decimal" />
+            <xs:element name="currency" type="xs:string" />
+            <xs:element name="weight" type="xs:decimal" />
+            <xs:element name="height" type="xs:decimal" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

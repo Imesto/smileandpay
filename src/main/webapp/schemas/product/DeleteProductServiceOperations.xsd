@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.smileandpay.com/webservice/service/deleteProductServices"
+            elementFormDefault="qualified">
+    <xsd:element name="DeleteProductRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="productId" type="xsd:int" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="DeleteProductResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="status" type="xsd:string" />
+                <xsd:element name="errorMessage" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="productId" type="xsd:int" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+    <bean id="AddMerchantService"
+          class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
+          lazy-init="true">
+        <property name="schemaCollection">
+            <bean
+                    class="org.springframework.xml.xsd.commons.CommonsXsdSchemaCollection">
+                <property name="inline" value="true" />
+                <property name="xsds">
+                    <list>
+                        <value>schemas/merchant/AddMerchantServiceOperations.xsd</value>
+                    </list>
+                </property>
+            </bean>
+        </property>
+        <property name="portTypeName" value="AddMerchantService" />
+        <property name="serviceName" value="AddMerchantService" />
+        <property name="locationUri" value="/endpoints" />
+    </bean>
+
+    <bean id="UpdateMerchantService"
+          class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
+          lazy-init="true">
+        <property name="schemaCollection">
+            <bean
+                    class="org.springframework.xml.xsd.commons.CommonsXsdSchemaCollection">
+                <property name="inline" value="true" />
+                <property name="xsds">
+                    <list>
+                        <value>schemas/merchant/UpdateMerchantServiceOperations.xsd</value>
+                    </list>
+                </property>
+            </bean>
+        </property>
+        <property name="portTypeName" value="UpdateMerchantService" />
+        <property name="serviceName" value="UpdateMerchantService" />
+        <property name="locationUri" value="/endpoints" />
+    </bean>
+
+    <bean id="DeleteMerchantService"
+          class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
+          lazy-init="true">
+        <property name="schemaCollection">
+            <bean
+                    class="org.springframework.xml.xsd.commons.CommonsXsdSchemaCollection">
+                <property name="inline" value="true" />
+                <property name="xsds">
+                    <list>
+                        <value>schemas/merchant/DeleteMerchantServiceOperations.xsd</value>
+                    </list>
+                </property>
+            </bean>
+        </property>
+        <property name="portTypeName" value="DeleteMerchantService" />
+        <property name="serviceName" value="DeleteMerchantService" />
+        <property name="locationUri" value="/endpoints" />
+    </bean>
+
+
+</beans>
